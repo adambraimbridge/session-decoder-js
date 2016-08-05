@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "session-decoder.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha test --recursive"
+    "test": ""
   },
   "dependencies": {
     "msgpack-javascript": "0.9.0",
