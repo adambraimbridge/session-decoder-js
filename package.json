@@ -1,7 +1,7 @@
 {
   "name": "@financial-times/session-decoder-js",
   "version": "0.0.0",
-  "main": "session-decoder.js",
+  "main": "src/session-decoder.js",
   "scripts": {
     "test": ""
   },
