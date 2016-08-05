@@ -43,7 +43,7 @@ function SessionDecoder(publicKey) {
         }
         const base64EncodedToken = split[0];
         const base64EncodedSignature = split[1];
-        const sessionTokenBuffer = Buffer.from(base64EncodedToken, 'base64');
+        const sessionTokenBuffer = new Buffer(base64EncodedToken, 'base64');
         const verifier = crypto.createVerify('SHA256');
 
         verifier.update(sessionTokenBuffer);
