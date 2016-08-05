@@ -1,4 +1,4 @@
 include n.Makefile
 
 test:
-    mocha test --recursive
+  mocha test --recursive
