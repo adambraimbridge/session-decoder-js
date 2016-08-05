@@ -41,6 +41,9 @@ function toHexDigits(val, digits) {
 
 class SessionDecoder {
 	constructor (publicKey) {
+		if (!publicKey) {
+			throw new Error('missing public key in session token decoder constructor');
+		}
 		this.publicKey = convertPublicKeyToPEM(publicKey);
 	}
 
