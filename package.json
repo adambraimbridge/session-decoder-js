@@ -1,6 +1,6 @@
 {
-  "name": "session-decoder",
-  "version": "0.0.1",
+  "name": "@financial-times/session-decoder",
+  "version": "0.0.0",
   "main": "session-decoder.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test --recursive"
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "npm-prepublish": "^1.2.1"
   }
 }
