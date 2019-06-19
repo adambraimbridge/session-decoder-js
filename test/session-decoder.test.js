@@ -33,6 +33,6 @@ describe('The SessionDecoder', () => {
         expect(() => {
             new SessionDecoder("someBadPublicKey")
                 .decode("z1hmrYYYPkZd05pFdLsDG1QKzwAAAVY2C673ww.MEQCICSwJIe5CUKslyxX4vlpPt2B0f9upZnX91QeVE9n1Jr9AiBB30Ry8QdYaMYg3Ns7wTZnBz8dIQ6OIr5UpNT3foliIw");
-        }).to.throw("PEM_read_bio_PUBKEY failed");
+        }).to.throw("error:0D07207B:asn1 encoding routines:ASN1_get_object:header too long");
     });
 });
