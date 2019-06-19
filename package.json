@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "main": "src/session-decoder.js",
   "scripts": {
-    "test": ""
+    "test": "",
+    "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "dependencies": {
     "msgpack-javascript": "0.10.0",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
-    "npm-prepublish": "^1.2.1"
+    "npm-prepublish": "^1.2.1",
+    "snyk": "^1.169.0"
   }
 }
