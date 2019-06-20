@@ -4,7 +4,10 @@
   "main": "src/session-decoder.js",
   "scripts": {
     "test": "",
-    "prepare": "npx snyk protect || npx snyk protect -d || true"
+    "prepare": "npx snyk protect || npx snyk protect -d || true",
+    "precommit": "secret-squirrel",
+    "commitmsg": "secret-squirrel-commitmsg",
+    "prepush": "make verify -j3"
   },
   "dependencies": {
     "msgpack-javascript": "0.10.0",
@@ -12,6 +15,7 @@
     "long": "3.2.0"
   },
   "devDependencies": {
+    "@financial-times/n-gage": "^3.6.0",
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
     "npm-prepublish": "^1.2.1",

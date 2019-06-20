@@ -5,7 +5,7 @@ const base64url = require('base64url');
 const msgpack = require('msgpack-javascript');
 const long = require('long');
 
-function convertPublicKeyToPEM(publicKey) {
+function convertPublicKeyToPEM (publicKey) {
 	const base64PublicKey = base64url.toBase64(publicKey);
 
 	return `-----BEGIN PUBLIC KEY-----
@@ -13,7 +13,7 @@ ${base64PublicKey.replace(/(.{64})/g, '$1')}
 -----END PUBLIC KEY-----`;
 }
 
-function getSessionFromTokenBuffer(sessionTokenBuffer) {
+function getSessionFromTokenBuffer (sessionTokenBuffer) {
 	const unpacker = new msgpack.Unpacker(sessionTokenBuffer);
 	const unpackedLong1 = unpacker.unpackInt();
 	const unpackedLong2 = unpacker.unpackInt();
@@ -23,7 +23,7 @@ function getSessionFromTokenBuffer(sessionTokenBuffer) {
 	return uuidFrom(mostSignificantBits, leastSignificantBits);
 }
 
-function uuidFrom(mostSig, leastSig) {
+function uuidFrom (mostSig, leastSig) {
 	return [
 		toHexDigits(mostSig.shiftRight(32), 8),
 		toHexDigits(mostSig.shiftRight(16), 4),
@@ -33,7 +33,7 @@ function uuidFrom(mostSig, leastSig) {
 	].join('-');
 }
 
-function toHexDigits(val, digits) {
+function toHexDigits (val, digits) {
 	const hi = new long(1).shiftLeft((digits * 4));
 	return hi.or((val.and((hi - 1)))).toString(16).substring(1);
 }
