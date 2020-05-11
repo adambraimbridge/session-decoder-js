@@ -17,6 +17,7 @@
   "devDependencies": {
     "@financial-times/n-gage": "^3.6.0",
     "chai": "^3.5.0",
+    "lodash": "^4.17.15",
     "mocha": "^2.5.3",
     "npm-prepublish": "^1.2.1",
     "nyc": "^15.0.1",
